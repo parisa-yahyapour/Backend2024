@@ -1,0 +1,10 @@
+(0.153) SELECT "account_account"."id", "account_account"."owner_id", "account_account"."account_id", "account_account"."credit" FROM "account_account" WHERE "account_account"."account_id" = 6935889506029 LIMIT 21; args=(6935889506029,); alias=default
+(0.153) SELECT "account_account"."id", "account_account"."owner_id", "account_account"."account_id", "account_account"."credit" FROM "account_account" WHERE "account_account"."account_id" = 6148178262818 LIMIT 21; args=(6148178262818,); alias=default
+(0.145) SELECT "person_person"."name", "account_account"."credit" FROM "account_account" LEFT OUTER JOIN "person_person" ON ("account_account"."owner_id" = "person_person"."id") WHERE "account_account"."account_id" = 6935889506029 LIMIT 21; args=(6935889506029,); alias=default
+Query Result: <QuerySet [{'owner__name': 'Emily', 'credit': 644303990479}]>
+(0.143) SELECT "person_person"."name", "account_account"."credit" FROM "account_account" LEFT OUTER JOIN "person_person" ON ("account_account"."owner_id" = "person_person"."id") WHERE "account_account"."account_id" = 6148178262818 LIMIT 21; args=(6148178262818,); alias=default
+Query Result: <QuerySet [{'owner__name': 'Matthew', 'credit': 9317960725712}]>
+(0.012) UPDATE "account_account" SET "owner_id" = 27, "account_id" = 6935889506029, "credit" = 644303990000 WHERE "account_account"."id" = 10020011; args=(27, 6935889506029, 644303990000, 10020011); alias=default
+(0.005) UPDATE "account_account" SET "owner_id" = 24, "account_id" = 6148178262818, "credit" = 9317960726191 WHERE "account_account"."id" = 10020012; args=(24, 6148178262818, 9317960726191, 10020012); alias=default
+(0.140) SELECT "account_account"."credit" FROM "account_account" WHERE "account_account"."account_id" = 6935889506029 LIMIT 21; args=(6935889506029,); alias=default
+Query Result: <QuerySet [{'credit': 644303990000}]>

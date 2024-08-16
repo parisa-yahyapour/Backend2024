@@ -1,0 +1,2 @@
+(0.001) SELECT "account_account"."id", "account_account"."owner_id", "account_account"."account_id", "account_account"."credit" FROM "account_account" ORDER BY "account_account"."credit" DESC LIMIT 1; args=(); alias=default
+Query Result: <QuerySet [<Account: Account object (10020488)>]>
